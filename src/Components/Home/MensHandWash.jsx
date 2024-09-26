@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { FaStar, FaShoppingBag, FaSmile } from "react-icons/fa"; // Importing FontAwesome icons
+import { FaStar, FaShoppingBag, FaSmile } from "react-icons/fa";
+import { IoCartSharp } from "react-icons/io5";
+import { TbCurrencyTaka } from "react-icons/tb";
 
 const MensHandWash = () => {
   // States for the animated counters
@@ -10,7 +12,7 @@ const MensHandWash = () => {
   // Function to animate counters
   const animateCounter = (target, setState, duration) => {
     let start = 0;
-    const increment = target / (duration / 10); // Adjust increment speed based on duration
+    const increment = target / (duration / 10);
 
     const counter = setInterval(() => {
       start += increment;
@@ -18,21 +20,21 @@ const MensHandWash = () => {
         start = target;
         clearInterval(counter);
       }
-      setState(parseFloat(start.toFixed(1))); // For rating, limiting to 1 decimal point
+      setState(parseFloat(start.toFixed(1)));
     }, 10);
   };
 
   useEffect(() => {
-    animateCounter(48, setRating, 2000); // Animating rating to 4.6 in 2 seconds
-    animateCounter(200, setProductsSold, 2000); // Animating products sold to 200 in 2 seconds
-    animateCounter(99, setReviews, 2000); // Animating reviews to 99 in 2 seconds
+    animateCounter(48, setRating, 2000);
+    animateCounter(200, setProductsSold, 2000);
+    animateCounter(99, setReviews, 2000);
   }, []);
 
   return (
     <>
       <section className="container flex justify-between pt-[110px]">
         {/* ================== counter part ==================== */}
-        <div>
+        <div className="pt-[96px]">
           <p className="text-[#F2994A] pt font-normal text-[20px] pb-[25.5px]">
             All skins types
           </p>
@@ -61,6 +63,27 @@ const MensHandWash = () => {
               <span className="text-sm text-gray-500">Reviews</span>
             </div>
           </div>
+          <div className="pt-[40px]">
+            <h5 className="pt font-normal text-[36px] text-[#C51605] leading-[130%]">
+              Men’s Hand wash lorem
+            </h5>
+            <div>
+              <div>
+                <button className="py-[13px] px-[35px] bg-[#E52525] rounded-[5px] text-white inter font-medium text-[18px] flex gap-[18px]">
+                  <span className="pt-[3px] text-[22px] ">
+                    <IoCartSharp />
+                  </span>
+                  Add to cart
+                </button>
+              </div>
+              <div>
+                <TbCurrencyTaka />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src="./img/wash.png" alt="HandWash" />
         </div>
       </section>
     </>
