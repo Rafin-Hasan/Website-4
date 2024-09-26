@@ -75,8 +75,8 @@ const MensHandWash = () => {
                 <div>
                   <AddButton />
                 </div>
-                <div className="flex gap-1 pt-2 text-[30px] text-[#C51605] ">
-                  <span className="pt-1">
+                <div className="flex pt gap-1 pt-1 text-[30px] text-[#C51605] ">
+                  <span className="pt-2">
                     <TbCurrencyTaka />
                   </span>
                   700
