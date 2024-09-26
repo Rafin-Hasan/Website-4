@@ -1,9 +1,6 @@
 import React from "react";
 import Counter from "./Counter";
-import { IoCartSharp } from "react-icons/io5";
-import WhyChooseUs from "./WhyChooseUs";
-import MensHandWash from "./MensHandWash";
-
+import AddButton from "./AddButton";
 const HomeComponent = () => {
   return (
     <>
@@ -25,22 +22,13 @@ const HomeComponent = () => {
             </p>
           </div>
           <div>
-            <button className="py-[13px] px-[35px] bg-[#E52525] rounded-[5px] text-white inter font-medium text-[18px] flex gap-[18px]">
-              <span className="pt-[3px] text-[22px] ">
-                <IoCartSharp />
-              </span>
-              Add to cart
-            </button>
+            <AddButton />
           </div>
           <div className="pt-[42px]">
             <Counter />
           </div>
         </div>
       </section>
-      <div>
-        <WhyChooseUs />
-        <MensHandWash />
-      </div>
     </>
   );
 };
