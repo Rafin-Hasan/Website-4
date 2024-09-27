@@ -33,7 +33,7 @@ const Footer = () => {
               placeholder="Enter your email address"
               className="flex-grow inter text-[18px] font-medium py-[33px] pl-6 pr-[223px] focus:outline-none text-gray-700 placeholder-gray-400 rounded-l-full"
             />
-            <button className="bg-[#E52525] inter font-medium text-[18px] leading-[145%] text-white px-[35px] py-[13px] mr-[20px] rounded-full hover:bg-red-600 transition-colors duration-300">
+            <button className="bg-[#E52525] inter font-medium text-[18px] leading-[145%] text-white px-[35px] py-[13px] mr-[20px] rounded-full border-2 border-transparent transition-all duration-200 ease-in-out hover:bg-white hover:text-[#E52525] hover:border-[#E52525]">
               Subscribe now
             </button>
           </div>
