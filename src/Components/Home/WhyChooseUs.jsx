@@ -20,13 +20,14 @@ const WhyChooseUs = () => {
           Why <span className="text-red-500">choose</span> us
         </h2>
         <p className="mb-8 w-[526px] m-auto text-gray-700 text-lg">
-          SLorem Ipsum is simply dummy text of the printing and typesetting
+          Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's
         </p>
       </div>
       <div className="flex justify-between">
+        {/* Card 1 */}
         <div
-          className="w-[380px] h-[275px] pt-8 pl-[26px] bg-[#F0EFEA] rounded-[5px]"
+          className="w-[380px] h-[275px] pt-8 pl-[26px] bg-[#F0EFEA] rounded-[5px] transition-all duration-500 ease-out hover:bg-white hover:border hover:border-gray-300 hover:shadow-xl hover:scale-[1.02]"
           data-aos="fade-right"
         >
           <div className="w-[58px] h-[58px] p-[11px] text-4xl rounded-full shadow-2xl text-[#C51605] bg-[#CDD5CA]">
@@ -41,8 +42,9 @@ const WhyChooseUs = () => {
           </p>
         </div>
 
+        {/* Card 2 */}
         <div
-          className="w-[380px] h-[275px] pt-8 pl-[26px] bg-[#F0EFEA] rounded-[5px]"
+          className="w-[380px] h-[275px] pt-8 pl-[26px] bg-[#F0EFEA] rounded-[5px] transition-all duration-500 ease-out hover:bg-white hover:border hover:border-gray-300 hover:shadow-xl hover:scale-[1.02]"
           data-aos="fade-up"
         >
           <div className="w-[58px] h-[58px] p-[11px] text-4xl rounded-full shadow-2xl text-[#C51605] bg-[#CDD5CA]">
@@ -57,8 +59,9 @@ const WhyChooseUs = () => {
           </p>
         </div>
 
+        {/* Card 3 */}
         <div
-          className="w-[380px] h-[275px] pt-8 pl-[26px] bg-[#F0EFEA] rounded-[5px]"
+          className="w-[380px] h-[275px] pt-8 pl-[26px] bg-[#F0EFEA] rounded-[5px] transition-all duration-500 ease-out hover:bg-white hover:border hover:border-gray-300 hover:shadow-xl hover:scale-[1.02]"
           data-aos="fade-left"
         >
           <div className="w-[58px] h-[58px] p-[11px] text-4xl rounded-full shadow-2xl text-[#C51605] bg-[#CDD5CA]">
