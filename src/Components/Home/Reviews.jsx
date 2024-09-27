@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 import { IoMdStar } from "react-icons/io";
 
 const Reviews = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: false, // If you want the animation to happen every time when in view
+      mirror: true, // Trigger animations on scroll up
+    });
+  }, []);
+
   const reviews = [
     {
       name: "Ebrahim Ahmed",
@@ -21,7 +31,9 @@ const Reviews = () => {
 
   return (
     <div className="bg-white py-12 container">
-      <div className="text-center mb-10">
+      <div className="text-center mb-10" data-aos="fade-up">
+        {" "}
+        {/* Apply AOS animation */}
         <h2 className="text-[48px] pt font-normal text-[#C51605] mb-[21px]">
           Review
         </h2>
@@ -32,7 +44,12 @@ const Reviews = () => {
       </div>
       <div className="flex justify-center space-x-8">
         {reviews.map((review, index) => (
-          <div key={index} className="text-center">
+          <div
+            key={index}
+            className="text-center"
+            data-aos="fade-up"
+            data-aos-delay={index * 200}
+          >
             <div className="flex justify-center text-yellow-500 mb-4">
               {Array(review.stars)
                 .fill()

@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 import { FaTelegram, FaFacebook } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: true, // Animation will only happen once when the element comes into view
+      mirror: false, // Disable animation when scrolling back up
+    });
+  }, []);
+
   return (
     <div>
       {/* Subscription Section */}
-      <div className="bg-[#ECEBE6]">
+      <div className="bg-[#ECEBE6]" data-aos="fade-down">
+        {" "}
+        {/* Add AOS fade-up */}
         <div className="container flex justify-center m-auto items-center py-[80px]">
           <div>
             <h2 className="text-[48px] w-[356px] leading-[125%] pt font-normal text-[#333333]">
@@ -15,7 +27,7 @@ const Footer = () => {
               <span className="text-[#C51605]">updates</span>
             </h2>
           </div>
-          <div className="flex items-center bg-white border border-gray-300 rounded-full ml-[111px] shadow-md p-2 w-full ">
+          <div className="flex items-center bg-white border border-gray-300 rounded-full ml-[111px] shadow-md p-2 w-full">
             <input
               type="email"
               placeholder="Enter your email address"
@@ -29,7 +41,9 @@ const Footer = () => {
       </div>
 
       {/* Footer Section */}
-      <div className="bg-[#C51605]">
+      <div className="bg-[#C51605]" data-aos="fade-up">
+        {" "}
+        {/* Add AOS fade-up */}
         <div className="container pt-16">
           <div className="text-center text-white">
             <h3 className="text-[34px] inter font-black leading-[125%] pb-[45px]">
@@ -60,7 +74,7 @@ const Footer = () => {
                 <FaFacebook />
               </Link>
             </div>
-            <p className="text-[18px] inter font-medium leading-[145%] pb-[66px]  ">
+            <p className="text-[18px] inter font-medium leading-[145%] pb-[66px]">
               © 2024 All Rights Reserved.
             </p>
           </div>

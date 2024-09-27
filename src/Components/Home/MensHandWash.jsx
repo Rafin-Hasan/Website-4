@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 import { FaStar, FaShoppingBag, FaSmile } from "react-icons/fa";
 import { TbCurrencyTaka } from "react-icons/tb";
 import AddButton from "./AddButton";
@@ -30,11 +32,21 @@ const MensHandWash = () => {
     animateCounter(99, setReviews, 2000);
   }, []);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: true, // Animation will only happen once when the element comes into view
+    });
+  }, []);
+
   return (
     <>
       <section className="bg-[#ECEBE6]">
-        <div className="container flex justify-between pt-[110px]">
-          <div className="pt-[96px]">
+        <div
+          className="container flex justify-between pt-[110px]"
+          data-aos="fade-up"
+        >
+          <div className="pt-[96px]" data-aos="fade-right">
             <p className="text-[#F2994A] pt font-normal text-[20px] pb-[25.5px]">
               All skins types
             </p>
@@ -84,7 +96,7 @@ const MensHandWash = () => {
               </div>
             </div>
           </div>
-          <div>
+          <div data-aos="fade-left">
             <img src="./img/wash.png" alt="HandWash" />
           </div>
         </div>
