@@ -7,7 +7,7 @@ const MensDayCream = () => {
   return (
     <>
       <section className="container mt-[110px] mb-[155px]">
-        <div className="flex gap-[120px] ">
+        <div className="flex gap-[120px] justify-center">
           <div>
             <img src="./img/cream.png" alt="cream" />
           </div>
@@ -51,7 +51,7 @@ const MensDayCream = () => {
         </div>
       </section>
       <section className="container mb-[142px]">
-        <div className="flex gap-[190px]">
+        <div className="flex gap-[190px] justify-center">
           <div>
             <div className="pt-[39px]">
               <p className="pt font-normal text-[20px] text-[#F2994A]">
